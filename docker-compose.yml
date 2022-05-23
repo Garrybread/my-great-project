@@ -21,3 +21,4 @@ services:
 volumes:
   bundle_cache:
   my_dbdata:
+  

@@ -1,0 +1,3 @@
+= form_with model: [@book, @book.reviews.build] do |form|
+    = form.text_area :body, placeholder: "Your review here"
+        = form.submit data: { disable_with: false }

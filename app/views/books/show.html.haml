@@ -9,11 +9,11 @@
   %strong Price:
   = @book.price
 %h2 Reviews
-%ul
-  - @book.reviews.each do |review|
-    %li= review.body
+  = render 'books/reviews'
+
 = link_to 'Edit', edit_book_path(@book)
 |
-= link_to 'Add Review', book_reviews_path(@book)
-|
 = link_to 'Back', books_path
+
+%div
+  = render 'books/all'

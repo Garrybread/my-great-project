@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %strong Title:
+  = @book.title
+%p
+  %strong Description:
+  = @book.description
+%p
+  %strong Price:
+  = @book.price
+%h2 Reviews
+%ul
+  - @book.reviews.each do |review|
+    %li= review.body
+= link_to 'Edit', edit_book_path(@book)
+|
+= link_to 'Add Review', book_reviews_path(@book)
+|
+= link_to 'Back', books_path

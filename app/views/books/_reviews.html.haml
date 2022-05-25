@@ -1,3 +1,5 @@
-= form_with model: [@book, @book.reviews.build] do |form|
-    = form.text_area :body, placeholder: "Your review here"
+%div{data: {controller: "reviews"}}
+    = form_with model: [@book, @book.reviews.build], data: { action: "reviews#addBody" } do |form|
+        = form.text_area :body, placeholder: "Your review here", data: { target: "reviews.body" }
         = form.submit data: { disable_with: false }
+    %ul{data: {target: "reviews.add"}}

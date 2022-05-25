@@ -1,0 +1,6 @@
+- @book.reviews.each do |review|
+  %ul
+    %li.review
+      = review.body
+      = button_tag "Remove Review", data: { controller: "reviews", action: "reviews#remove" }
+      = button_tag "Upvote Review", data: { controller: "reviews", action: "reviews#upvote" }

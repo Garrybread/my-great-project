@@ -8,12 +8,15 @@
 %p
   %strong Price:
   = @book.price
+
 %h2 Reviews
-  = render 'books/reviews'
+= render 'books/reviews'
 
 = link_to 'Edit', edit_book_path(@book)
 |
 = link_to 'Back', books_path
 
-%div
-  = render 'books/all'
+%div{data: {controller: 'reviews'}}
+  %button{data: {action: "reviews#showAll"}} Show Older Reviews
+  %div{data: {target: 'reviews.show'}, style: 'visibility:hidden'}
+    = render 'books/all'

@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%h1 Library
+
+%p
+  %strong Name:
+  = @library.name
+%p
+  %strong Address:
+  = @library.address
+%p
+  %strong Number:
+  = @library.number
+
+= link_to 'Edit', edit_library_path(@library)
+|
+= link_to 'Back', libraries_path
+
+= render 'libraries/all'
+
+%h2 Books

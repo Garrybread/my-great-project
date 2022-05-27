@@ -1,0 +1,19 @@
+%h1 Libraries
+%table
+    %thead
+        %tr
+            %th Name
+            %th Address
+            %th Phone Number
+            %th # Books
+            %th
+    %tbody
+        - @libraries.each do |library|
+            %tr
+                %td= library.name
+                %td= library.address
+                %td= library.number
+                %td= library.books.length
+                %td= link_to "Show", library_path(library)
+                %td= link_to 'Back' 
+                %td= link_to 'Edit', edit_library_path(library)

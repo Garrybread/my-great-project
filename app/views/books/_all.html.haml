@@ -1,6 +1,8 @@
 - @book.reviews.each do |review|
-  %ul
-    %li.review
-      = review.body
-      = button_tag "Remove Review", data: { controller: "reviews", action: "reviews#remove" }
-      = button_tag "Upvote Review", data: { controller: "reviews", action: "reviews#upvote" }
+  -if review.persisted?
+    %ul
+      %li.review
+        = review.body
+        = button_tag "Remove Review", data: { controller: "reviews", action: "reviews#remove" }
+        = button_tag "Upvote Review", data: { controller: "reviews", action: "reviews#upvote" }
+        = link_to "Delete Review", book_review_path(@book, review), method: :delete, data: { confirm: 'Are you sure?', controller: "reviews", action: "reviews#remove" }

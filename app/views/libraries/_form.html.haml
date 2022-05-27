@@ -1,5 +1,5 @@
 = form_with(model: library) do |form|
-  - if library.errors.any?
+  - if library.errors.any?  
     #error_explanation
       %h2
         = pluralize(library.errors.count, "error")
@@ -16,5 +16,8 @@
   .field
     = form.label :number
     = form.text_field :number
+  .field
+    = form.label :books
+    = form.collection_select(:book_ids, Book.all, :id, :title, {}, {multiple: true})
   .actions
     = form.submit

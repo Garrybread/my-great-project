@@ -1,5 +1,5 @@
 %div{data: {controller: "reviews"}}
     = form_with model: [@book, @book.reviews.build], data: { action: "reviews#addBody" } do |form|
-        = form.text_area :body, placeholder: "Your review here", data: { target: "reviews.body" }
-        = form.submit data: { disable_with: false }
+        = form.text_area :body, placeholder: "Your review here", data: { target: "reviews.body" }, class: "form-control mb-3"
+        = form.submit data: { disable_with: false }, class: "btn btn-info"
     %ul{data: {target: "reviews.add"}}

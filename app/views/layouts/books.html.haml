@@ -1,17 +1,15 @@
 - content_for :content do
-  .jumbotron.text-center
-    %h1 Book Info
-  .container
+  .jumbotron.text-center.py-4
+    %h1.fst-italic Book Info
+  .container-fluid
     .row
-      .col-lg-6
-        %p
+      .col-12.d-flex.justify-content-center.my-4
+        %div
           = yield
-      .col-lg-6
+      .col-12.text-center
         %p
-          .caption
+          .caption.fst-italic
             You can always count on a book to be friendly and welcoming!
-        .col-lg-6
-          %p
-            .caption
-              You can always count on a book to be friendly and welcoming!
-  = render template: "layouts/application"
+          .caption.fst-italic
+            Books are okay I guess.
+= render template: "layouts/application"

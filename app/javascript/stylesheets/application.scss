@@ -1,8 +1,9 @@
+$info: #1b1b1b;
 @import "bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
 
 $white: white; 
-$black: rgb(36, 36, 36);
+$black: rgb(20, 20, 20);
 
 .navbar {
   margin-bottom: 0;
@@ -33,7 +34,7 @@ a:visited {
 }
 
 .jumbotron {
-  background: #4a84ee; 
+  background: #0099ff; 
   color: $white; 
   text-align: center; 
   p {
@@ -65,4 +66,15 @@ img, video, audio {
 caption {
   float: left;
   clear: both;
+}
+
+.btn-info {
+  color: #ffffff
+}
+
+.basic {
+  @include button-variant(
+    $black,
+    $black
+  )
 }

@@ -8,8 +8,8 @@
         - book.errors.each do |error|
           %li= error.full_message
   .field
-    = form.label :title
-    = form.text_field :title
+    = form.label :title, class: "form-label"
+    = form.text_field :title, class: "form-control w-50"
   .field
     = form.label :description
     = form.text_area :description

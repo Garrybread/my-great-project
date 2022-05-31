@@ -1,0 +1,17 @@
+- content_for :content do
+  .jumbotron.text-center
+    %h1 Book Info
+  .container
+    .row
+      .col-lg-6
+        %p
+          = yield
+      .col-lg-6
+        %p
+          .caption
+            You can always count on a book to be friendly and welcoming!
+        .col-lg-6
+          %p
+            .caption
+              You can always count on a book to be friendly and welcoming!
+  = render template: "layouts/application"

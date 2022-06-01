@@ -1,21 +1,22 @@
 %p#notice= notice
-%p.fw-lighter
+%p.fs-4.fw-normal
   %strong Title:
   = @book.title
-%p.fw-lighter
+%p.fs-4.fw-normal
   %strong Description:
   = @book.description
-%p.fw-lighter
+%p.fs-4.fw-normal
   %strong Price:
   = @book.price
 
-%h2.text-info Reviews
+= link_to 'Edit', edit_book_path(@book), class: 'btn btn-info'
+= link_to 'Back', books_path, class: 'btn btn-info'
+
+%h2.mt-5.text-light Reviews
 = render 'books/reviews'
 
-= link_to 'Edit', edit_book_path(@book), class: 'btn btn-info btn-sm'
-= link_to 'Back', books_path, class: 'btn btn-info btn-sm'
 
 %div{data: {controller: 'reviews'}}
-  %button{data: {action: "reviews#showAll"}} Show Older Reviews
+  %button.btn.btn-info{data: {action: "reviews#showAll"}} Show Older Reviews
   %div{data: {target: 'reviews.show'}, style: 'visibility:hidden'}
     = render 'books/all'

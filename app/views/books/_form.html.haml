@@ -8,13 +8,13 @@
         - book.errors.each do |error|
           %li= error.full_message
   .field
-    = form.label :title, class: "form-label"
-    = form.text_field :title, class: "form-control w-50"
+    = form.label :title, class: "form-label fs-4"
+    = form.text_field :title, class: "form-control"
   .field
-    = form.label :description
-    = form.text_area :description
+    = form.label :description, class: "form-label fs-4"
+    = form.text_area :description, class: "form-control"
   .field
-    = form.label :price
-    = form.text_field :price
-  .actions
+    = form.label :price, class: "form-label fs-4"
+    = form.text_field :price, class: "form-control"
+  .actions.mt-4.btn.btn-info
     = form.submit

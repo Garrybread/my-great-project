@@ -4,6 +4,7 @@ $info: #1b1b1b;
 
 $white: white; 
 $black: rgb(20, 20, 20);
+$blue: #0099ff;
 
 .navbar {
   margin-bottom: 0;
@@ -30,11 +31,11 @@ p {
 }
 
 a:visited {
-  color: $black;
+  color: $white;
 }
 
 .jumbotron {
-  background: #0099ff; 
+  background: $blue; 
   color: $white; 
   text-align: center; 
   p {
@@ -49,8 +50,13 @@ a:visited {
 
 .btn-primary {
   color: $white;
-  border-color: $white;
+  background-color: $black;
+  border-color: $black;
   margin-bottom: 5px;
+}
+
+.text-primary {
+  color: $blue;
 }
 
 .btn-sm {
@@ -72,9 +78,9 @@ caption {
   color: #ffffff
 }
 
-.basic {
-  @include button-variant(
-    $black,
-    $black
-  )
+.btn-info {
+  color: $white;
+  background-color: $blue;
+  border-color: $blue;
+  margin-bottom: 5px;
 }

@@ -13,9 +13,8 @@
         %td.fs-5.text-white-50= book.description
         %td.fs-5.text-white-50= book.price
         %td= link_to 'Show', book, class: 'btn btn-secondary'
-        %td= link_to 'Edit', edit_book_path(book), class: 'btn btn-secondary'
-        %td= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-secondary'
         
-.d-flex.justify-content-center.mt-4
-  = link_to 'New Book', new_book_path, class: 'btn btn-info me-3'
+.mt-4
+.paginate
+  = will_paginate @books
   = link_to 'Home', root_path, class: 'btn btn-info'

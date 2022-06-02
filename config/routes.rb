@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :home, only: :index
   resources :libraries
-  resources :books do
+  resources :books, only: [:show, :index] do
     resources :reviews
   end
 

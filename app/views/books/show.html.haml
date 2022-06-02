@@ -9,7 +9,6 @@
   %strong Price:
   = @book.price
 
-= link_to 'Edit', edit_book_path(@book), class: 'btn btn-info'
 = link_to 'Back', books_path, class: 'btn btn-info'
 
 %h2.mt-5.text-light Reviews
@@ -17,6 +16,6 @@
 
 
 %div{data: {controller: 'reviews'}}
-  %button.btn.btn-info{data: {action: "reviews#showAll"}} Show Older Reviews
+  %button.btn.btn-info{data: {action: "reviews#showAll"}} Show Older Reviewss
   %div{data: {target: 'reviews.show'}, style: 'visibility:hidden'}
     = render 'books/all'
